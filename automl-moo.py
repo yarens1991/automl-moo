@@ -1,10 +1,10 @@
 '''Project description'''
 
-from autosklearn import *
-from pymoo import *
+from pymoo.core.problem import Problem
+from autosklearn.regression import AutoSklearnRegressor
 
-class Automlmoo(autosklearn, pymoo):
+class AutoMlMoo(Problem, AutoSklearnRegressor):
     pass
 
-if issubclass(Automlmoo, (autosklearn, pymoo)):
-    print('Automlmoo is subclass of autosklearn and pymoo')
+if issubclass(AutoMlMoo, (Problem, AutoSklearnRegressor)):
+    print('AutoMlMoo is subclass of Problem and AutoSklearnRegressor')
